@@ -15,7 +15,7 @@ def read_write():			#Function body
 	reader = csv.reader(file)	#csv.reader reads each lines
 	data = list(reader)		#data contains the list of lists
 	browser = webdriver.Firefox() 	#calling firefox webdriver
-	browser.get('http://localhost/FeedBack/addFeedback.php')	#opening the url
+	#browser.get('http://localhost/FeedBack/addFeedback.php')	#opening the url
 	row_count = 0			#initialize the row_count
 	for list0 in data:		#list0 contains the first list inside the data list
 			col_count = 0	#initialize the column count
@@ -45,5 +45,5 @@ def read_write():			#Function body
 									
 			Name.submit() #click the submit button on the webpage
 			time.sleep(2)
-			browser.get('http://localhost/FeedBack/addFeedback.php')
+			browser.get('http://localhost/FeedBack/addFeedback.php') #opening the url
 read_write()
